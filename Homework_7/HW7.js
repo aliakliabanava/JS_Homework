@@ -9,23 +9,20 @@ Animal.prototype._formatFoodAmount = function(){
 }
 
 Animal.prototype.feed = function() {
-    this._self = this;
-
-    console.log("Насыпаем в миску" + " "+ this._self.dailyNorm() +" "+ "корма.");
+    console.log("Насыпаем в миску" + " "+ this.dailyNorm() +" "+ "корма.");
 };
 
 Animal.prototype.dailyNorm = function(amount) {
-    this._amount = amount;
 
-    if (!arguments.length) return this._formatFoodAmount(this._amount);
-    if (this._amount < 50) {
+    if (!arguments.length) return this._formatFoodAmount();
+    if (amount < 50) {
         throw new Error("Мало корма!");
     }
-    if (this._amount > 100) {
+    if (amount > 100) {
         throw new Error("Слишком много!");
     }
 
-    this._foodAmount = this._amount;
+    this._foodAmount = amount;
 }
 
 function Cat(name) {
@@ -63,7 +60,7 @@ function deepClone(original) {
             copy[i] = deepClone(original[i]);
         }
         return copy;
-    } else if (typeof original === "object") {
+    } else if (typeof original === "object" && original) {
         var copy = {};
         for (key in original) {
             copy[key] = deepClone(original[key])
