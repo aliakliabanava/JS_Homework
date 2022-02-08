@@ -23,13 +23,15 @@ for (var i = 0; i < childs.length; i++) {
         evt.preventDefault(); 
 
         if (localStorage.getItem(evt.target.innerText) == null) {
-            localStorage.setItem(evt.target.innerText, evt.target.href );
+
+            var Obj = { 'path': evt.target.href};
+
+            localStorage.setItem(evt.target.innerText, JSON.stringify(Obj));
             evt.target.href = '#';
             alert('Link saved');
         } 
 
         else alert(localStorage.getItem(evt.target.innerText));
-        
     }
 }
 
@@ -38,5 +40,5 @@ window.onload = function() {
    }
 
 
-
+   
 

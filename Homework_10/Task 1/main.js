@@ -21,22 +21,9 @@ var childs = secondPar.children;
 for (var i = 0; i < childs.length; i++) {
     childs[i].onclick = function (evt) { 
         evt.preventDefault(); 
-
-        if (localStorage.getItem(evt.target.innerText) == null) {
-            localStorage.setItem(evt.target.innerText, evt.target.href );
-            evt.target.href = '#';
-            alert('Link saved');
-        } 
-
-        else alert(localStorage.getItem(evt.target.innerText));
+        alert(evt.target.href);
         
     }
 }
-
-window.onload = function() {
-    localStorage.clear();
-   }
-
-
 
 

@@ -1,0 +1,21 @@
+div {
+    margin-bottom: 10px;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
