@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+
+button {
+    margin-bottom: 30px;
+}
+
+.user_tab {
+    text-align: center;
+    padding-top: 15px;
+    display: inline-block;
+    background-color: turquoise;
+    border: 1px solid black;
+    min-height: 30px;
+    width: 80px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.active_user {
+    background-color: white;
+}
+
+.active_info {
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+    width: 490px;
+    display: block;
+    left: 9px;
+}
+
+.info {
+    display: none;
+}
+
+img {
+    float: left;
+    padding: 10px;
+}
+
+.error {
+    background-color: red;
+    text-align: center;
+}
+
